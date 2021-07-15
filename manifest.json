@@ -1,0 +1,11 @@
+{
+	"name": "Remove Block Code TopDev",
+	"version": "1.0",
+	"description": "Build an Extension!",
+	"permissions": ["tabs", "https://topdev.vn/blog/*"],
+	"background": {
+		"scripts": ["background.js"],
+		"peristent": true
+	},
+	"manifest_version": 2
+}
