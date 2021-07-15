@@ -7,4 +7,8 @@ if (document.getElementsByClassName("code-expandContent").length) {
 		codeContent[i] ? codeContent[i++].removeAttribute("style") : i++;
 		blockCode = document.getElementsByClassName("bbCodeBlock-expandLink");
 	}
+	console.log(
+		"%cUnlock Code Success!!!",
+		"color: lightgreen; font-size: 20px;"
+	);
 }

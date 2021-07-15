@@ -1,17 +1,19 @@
 const topDev = /^https:\/\/topdev.vn\/blog/i;
 
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-	if (changeInfo.status == "complete") {
-		if (topDev.test(tab.url)) {
-			console.log("detect TopDev");
-			removeBlockCode();
+	if (topDev.test(tab.url))
+		if (changeInfo.status == "complete") {
+			console.log(`%c Detection TopDev => ${tabId}`, "color: #5477c0");
+			removeBlockCode(tabId);
 		}
-	}
 });
 
-function removeBlockCode() {
+function removeBlockCode(tabId) {
+	console.log(
+		`%c Seen Script Remove Block Code => ${tabId}`,
+		"color: #f9f391"
+	);
 	chrome.tabs.executeScript(null, {
 		file: "removeBlockCode.js",
 	});
-	console.log("remove complete!!!");
 }
