@@ -7,13 +7,12 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 			removeBlockCode(tabId);
 		}
 });
-
 function removeBlockCode(tabId) {
 	console.log(
 		`%c Seen Script Remove Block Code => ${tabId}`,
 		"color: #f9f391"
 	);
-	chrome.tabs.executeScript(null, {
+	chrome.tabs.executeScript(tabId, {
 		file: "removeBlockCode.js",
 	});
 }
