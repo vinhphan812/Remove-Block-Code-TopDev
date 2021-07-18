@@ -13,6 +13,6 @@ function removeBlockCode(tabId) {
 		"color: #f9f391"
 	);
 	chrome.tabs.executeScript(tabId, {
-		file: "removeBlockCode.js",
+		file: "unlockBlock.js",
 	});
 }
