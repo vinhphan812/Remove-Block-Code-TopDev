@@ -1,4 +1,5 @@
-if (document.getElementsByClassName("code-expandContent").length) {
+var unlock = document.getElementsByClassName("bbCodeBlock-expandLink").length;
+if (unlock) {
 	const codeContent = document.getElementsByClassName("code-expandContent"),
 		blockCode = document.getElementsByClassName("bbCodeBlock-expandLink");
 	let i = 0;
@@ -12,7 +13,7 @@ if (document.getElementsByClassName("code-expandContent").length) {
 		"color: #d4edda; font-family: sans-serif; font-size: 16px;"
 	);
 	console.log(
-		`%c \t\t🔓 Unlock ${i} block`,
+		`%c \t\t🔓 Unlock ${unlock} block`,
 		"color: #fff3cd; font-family: sans-serif;"
 	);
 }
